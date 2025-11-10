@@ -610,7 +610,7 @@
                 cart = [];
                 renderCart();
                 document.getElementById('order-id-input').value = orderId;
-                document.getElementById('status-result').innerHTML = `Order **${orderId}** placed! Status: **Email Sent/Processing**.`;
+                document.getElementById('status-result').innerHTML = `Order ${orderId} placed! Status: Email Sent/Processing.`;
                 document.getElementById('status-result').style.color = 'blue';
                 
                 // Clean the URL so a refresh doesn't trigger the message again
@@ -631,13 +631,13 @@
             }
 
             if (orderId === 'MA-123') {
-                statusResult.innerHTML = `Order **${orderId}** found! <br> Progress: **In Production (70% done)** <br> Estimated Delivery: 3 days.`;
+                statusResult.innerHTML = `Order ${orderId} found! <br> Progress: In Production <br> Estimated Delivery: 7 days.`;
                 statusResult.style.color = 'orange';
             } else if (orderId === 'MA-999') {
-                statusResult.innerHTML = `Order **${orderId}** found! <br> Progress: **DELIVERED!** <br> Thank you for your purchase!`;
+                statusResult.innerHTML = `Order ${orderId} found! <br> Progress: DELIVERED! <br> Thank you for your purchase!`;
                 statusResult.style.color = 'green';
             } else if (orderId.startsWith('MA-')) {
-                 statusResult.innerHTML = `Order **${orderId}** found! <br> Progress: **Processing/Email Sent** <br> We'll start production soon.`;
+                 statusResult.innerHTML = `Order **${orderId}** found! <br> Progress: Processing/Email Sent <br> We'll start production soon.`;
                  statusResult.style.color = 'blue';
             } else {
                 statusResult.textContent = `Order ID ${orderId} not found. Please check your ID.`;
